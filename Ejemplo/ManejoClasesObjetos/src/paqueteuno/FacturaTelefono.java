@@ -1,53 +1,35 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package paqueteuno;
-
-/**
- *
- * @author reroes
- */
 public class FacturaTelefono {
     private String numeroTelefono;
     private double minutosMes;
     private double valorMinuto;
     private double valorFactura;
-    
     public void establecerNumeroTelefono(String c){
-        numeroTelefono = c;
+        this.numeroTelefono = c;
     }
-    
     public void establecerMinutosMes(double c){
-        minutosMes = c;
+        this.minutosMes = c;
     }
-    
     public void establecerValorMinuto(double c){
-        valorMinuto = c;
+        this.valorMinuto = c;
     }
-    
-    // public void establecerValorFactura(){
     public void calcularValorFactura(){
-        valorFactura = minutosMes * valorMinuto;
+        this.valorFactura = this.minutosMes * this.valorMinuto;
+        establecerValorFactura(valorFactura);
     }
-    
+    public void establecerValorFactura(double valorFactura){
+        this.valorFactura = valorFactura;
+    }
     public String obtenerNumeroTelefono(){
-        return numeroTelefono;
+        return this.numeroTelefono;
     }
-    
     public double obtenerMinutosMes(){
-        return minutosMes;
+        return this.minutosMes;
     }
-    
     public double obtenerValorMinuto(){
         return valorMinuto;
     }
-    
     public double obtenerValorFactura(){
         return valorFactura;
     }
-    
-    
-    
 }
